@@ -17,6 +17,13 @@ def main():
     a = Add_Test()
     b = Add_Test()
     print(a + b)
+    print(a + 123)
+    print(a + 3.14)
+    print("abcd" * 5) # 정의가 되어 있어서 에러 안남
+    print("abcd" + 5) # 정의가 안되어 있어서 에러
+    a = 5
+    print(a = a + 1)
+    #print(a++) # 파이썬에서는 ++, -- 연산자 지원 안함. a++는 a = a + 1과 같은 의미. a++는 a = a + 1로 바꿔서 사용해야 한다.
 
 
 
