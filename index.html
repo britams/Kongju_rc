@@ -1,1 +1,131 @@
-<h1>나는 이서현입니다. 테스트</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocar Making Project - 이서현</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #1e3a8a;
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .class-card {
+            background: #f1f5f9;
+            border-left: 5px solid #3b82f6;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.2s;
+        }
+        .class-card:hover {
+            transform: translateX(5px);
+            background: #e2e8f0;
+        }
+        .class-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+        .class-desc {
+            margin: 0;
+            color: #475569;
+        }
+        .badge {
+            background-color: #3b82f6;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 10px;
+        }
+        .python-badge {
+            background-color: #10b981;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🏎️ Autocar Making Project</h1>
+        <p class="subtitle">이서현의 오늘 교육 내용 일지 정리</p>
+    </header>
+
+    <div class="timeline">
+        <div class="class-card">
+            <div class="class-title"><span class="badge">1교시</span>수업 오리엔테이션</div>
+            <p class="class-desc">Autocar Making Project에 대한 전체적인 일정과 수업 방향성 소개</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge">2교시</span>개발 환경 설정 (1)</div>
+            <p class="class-desc">윈도우에서 리눅스를 쓸 수 있게 해주는 <strong>WSL2 설치 및 Ubuntu(Linux 기초)</strong> 학습, 코드 편집기인 <strong>VS Code 설치</strong> 및 연동 완료</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge">3교시</span>버전 관리 및 협업 도구</div>
+            <p class="class-desc">소스코드 관리를 위한 <strong>Git 설치</strong>, <strong>GitHub 계정 생성</strong> 및 원격 저장소(<strong>Repository</strong>) 만들기 실습</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge python-badge">4교시</span>Python 기초 개발</div>
+            <p class="class-desc">파이썬 언어의 특징과 개발 환경 확인 및 기초 구조 파악</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge python-badge">5교시</span>출력 함수 이해</div>
+            <p class="class-desc">화면에 데이터를 띄워주는 가장 기본적이고 중요한 <strong>print 함수 해석</strong> 및 실습</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge python-badge">6교시</span>변수와 자료형</div>
+            <p class="class-desc">데이터를 담는 바구니인 <strong>변수(Variable)</strong>의 개념과 숫자, 문자 등 다양한 <strong>자료형(Data Type)</strong> 학습</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge python-badge">7교시</span>연산자와 표현식</div>
+            <p class="class-desc">컴퓨터가 계산을 수행하도록 하는 사칙연산, 비교 연산 등 여러 <strong>연산자와 표현식</strong> 다루기</p>
+        </div>
+
+        <div class="class-card">
+            <div class="class-title"><span class="badge python-badge">8교시</span>문자열 포매팅</div>
+            <p class="class-desc">문자열을 더 효율적이고 가독성 좋게 출력하는 <strong>f-string</strong> 기법과 <strong>format()</strong> 함수 집중 실습</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
