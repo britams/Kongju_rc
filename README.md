@@ -10,13 +10,19 @@ Autocar making Project
 7교시: 연산자와 표현식 
 8교시: 문자열 f-string, format
 
-----------------------------------------------------------
+------------------------------------------------------
 06-23
 1교시: google slide 정보 공유
 2교시: if 조건문, bool 자료형
-3교시: github io 페이지 만들기
+3교시: github io 페이지 만들기(정적페이지, html, css)
 4교시: if 조건문, 삼향 연산자, False로 변환되는 예
-5교시: 
-6교시: 
-7교시: 
-8교시: 
+5교시: list, list 메소드, 바인딩, pyi
+6교시: list method(pop, del, remove)
+7교시: for, range, enumerate, zip
+8교시: 메모장 만들기webview! dict 공부, 
+------------------------------------------------------
+06-24
+1교시: while loop
+2교시: 사전 평가 시험
+3교시: 함수 작성, type hint, doc string, return
+4교시: 인자, 포지셔널 인자, 가변 인자, 디폴트 인자

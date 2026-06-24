@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Memo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+      gap: 12px;
+    }
+
+    h1 { font-size: 18px; color: #333; }
+
+    textarea {
+      flex: 1;
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      resize: none;
+      background: #fff;
+      outline: none;
+      line-height: 1.6;
+      transition: border-color 0.2s;
+    }
+
+    textarea:focus { border-color: #5b9cf6; }
+
+    .buttons { display: flex; gap: 10px; }
+
+    button {
+      flex: 1;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #btn-save { background: #5b9cf6; color: #fff; }
+    #btn-save:hover { background: #4a8de6; }
+    #btn-load { background: #eee; color: #333; }
+    #btn-load:hover { background: #ddd; }
+
+    #status { font-size: 12px; color: #888; text-align: center; min-height: 16px; }
+    #status.success { color: #4caf50; }
+    #status.error { color: #e53935; }
+  </style>
+</head>
+<body>
+  <h1>Simple Memo</h1>
+  <textarea id="memo" placeholder="Write your memo here..."></textarea>
+  <div class="buttons">
+    <button id="btn-save" onclick="saveNote()">Save</button>
+    <button id="btn-load" onclick="loadNote()">Load</button>
+  </div>
+  <div id="status"></div>
+
+  <script>
+    const textarea = document.getElementById("memo");
+    const status = document.getElementById("status");
+
+    function setStatus(msg, type) {
+      status.textContent = msg;
+      status.className = type;
+      setTimeout(() => { status.textContent = ""; status.className = ""; }, 2500);
+    }
+
+    window.addEventListener("pywebviewready", loadNote);
+
+    async function saveNote() {
+      try {
+        await window.pywebview.api.save_note(textarea.value);
+        setStatus("Saved!", "success");
+      } catch (e) {
+        setStatus("Error: " + e, "error");
+      }
+    }
+
+    async function loadNote() {
+      try {
+        const result = await window.pywebview.api.load_note();
+        textarea.value = result.text;
+        if (result.text) setStatus("Loaded!", "success");
+      } catch (e) {
+        setStatus("Error: " + e, "error");
+      }
+    }
+  </script>
+</body>
+</html>
