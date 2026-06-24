@@ -1,6 +1,6 @@
 # [임포트] 파이썬이 문법으로 딱 정해놓은 '예약어(비밀 단어)' 목록을 
 # 꺼내오기 위해 keyword 라는 내장 도구를 창고에서 가져옵니다.
-import keyword
+import keyword# 모듈이라고 함.
 
 
 def main():
