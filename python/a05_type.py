@@ -2,9 +2,9 @@ def main():
     int_a = 123
     print(int_a, type(int_a))
     int_a = "123 숫자"
-    print(int_a, type(int_a))
+    print(int_a, type(int_a), end="      ")
     int_a = 3.141592
-    print(int_a, type(int_a))#ctrl + / : 주석처리
+    print(int_a, type(int_a), )#ctrl + / : 주석처리
 
 
 if __name__ == "__main__":

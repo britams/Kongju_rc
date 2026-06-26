@@ -1,6 +1,6 @@
 # Kongju_rc
 Autocar making Project
-06-22
+2026-06-22
 1교시: 수업 오리엔테이션 
 2교시: wsl2 설치9(Linux 기초, Ubuntu), VsCode 설치 
 3교시: git 설치, github 계정 만들기, github repository 만들기 
@@ -10,8 +10,8 @@ Autocar making Project
 7교시: 연산자와 표현식 
 8교시: 문자열 f-string, format
 
-------------------------------------------------------
-06-23
+----------------------------------------------
+2026-06-23
 1교시: google slide 정보 공유
 2교시: if 조건문, bool 자료형
 3교시: github io 페이지 만들기(정적페이지, html, css)
@@ -20,12 +20,23 @@ Autocar making Project
 6교시: list method(pop, del, remove)
 7교시: for, range, enumerate, zip
 8교시: 메모장 만들기webview! dict 공부, 
-------------------------------------------------------
-06-24
+----------------------------------------------
+2026-06-24
 1교시: while loop
 2교시: 사전 평가 시험
 3교시: 함수 작성, type hint, doc string, return
 4교시: 인자, 포지셔널 인자, 가변 인자, 디폴트 인자
 5교시: 회귀함수, 람다 함수, map, filter
 6교시: file 읽기 쓰기, open, with open
-7교시: generator
+7교시: generator, decorator, closure
+8교시: time_decorator
+----------------------------------------------
+202-06-25
+1교시: pickle
+2교시: 클래스_딕션너리
+3교시: 스페셜 메소드
+4교시: 클래스 변수
+5교시: 클래스 메소드
+6교시: destructor, del, gc.collect
+7교시:
+8교시:
