@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>탁상시계</title>
+    <style>
+        /* 화면 전체 가운데 정렬 */
+        body {
+            background-color: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 시계 박스 */
+        .clock {
+            text-align: center;
+            color: #e0e0e0;
+            font-family: monospace;
+        }
+
+        /* 시간 숫자 */
+        .time {
+            font-size: 80px;
+            letter-spacing: 8px;
+        }
+
+        /* 오전/오후 */
+        .ampm {
+            font-size: 28px;
+            color: #a0a0c0;
+            margin-bottom: 4px;
+        }
+
+        /* 날짜 */
+        .date {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #a0a0c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="ampm" id="ampm"></div>
+        <div class="time" id="time">00:00:00</div>
+        <div class="date" id="date"></div>
+    </div>
+
+    <script>
+        function update() {
+            const now = new Date();
+
+            // 오전/오후
+            const hours24 = now.getHours();
+            const ampm = hours24 < 12 ? '오전' : '오후';
+            const hours12 = hours24 % 12 || 12;
+
+            // 시간 포맷 — 두 자리로 맞추기
+            const h = String(hours12).padStart(2, '0');
+            const m = String(now.getMinutes()).padStart(2, '0');
+            const s = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('ampm').textContent = ampm;
+            document.getElementById('time').textContent = `${h}:${m}:${s}`;
+
+            // 날짜 포맷
+            const days = ['일', '월', '화', '수', '목', '금', '토'];
+            const day = days[now.getDay()];
+            document.getElementById('date').textContent =
+                `${now.getFullYear()}년 ${now.getMonth()+1}월 ${now.getDate()}일 (${day})`;
+        }
+
+        // 1초마다 업데이트
+        update();
+        setInterval(update, 1000);
+    </script>
+</body>
+</html>

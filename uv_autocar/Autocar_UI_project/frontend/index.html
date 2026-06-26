@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Autocar Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>AUTOCAR DASHBOARD</h1>
+            <div class="header-time" id="clock"></div>
+        </div>
+
+        <div class="grid">
+            <!-- 접속확인 -->
+            <div class="card" id="card-connected">
+                <div class="card-icon">&#9679;</div>
+                <div class="card-info">
+                    <div class="card-title">접속확인</div>
+                    <div class="card-status" id="status-connected">끊김</div>
+                </div>
+                <button class="toggle-btn" id="btn-connected" onclick="toggle('connected')">Start</button>
+            </div>
+
+            <!-- 구동 -->
+            <div class="card" id="card-drive">
+                <div class="card-icon">&#9654;</div>
+                <div class="card-info">
+                    <div class="card-title">구동</div>
+                    <div class="card-status" id="status-drive">멈춤</div>
+                </div>
+                <button class="toggle-btn" id="btn-drive" onclick="toggle('drive')">Start</button>
+            </div>
+
+            <!-- 배터리 -->
+            <div class="card">
+                <div class="card-icon">&#9889;</div>
+                <div class="card-info">
+                    <div class="card-title">배터리</div>
+                    <div class="battery-bar-wrap">
+                        <div class="battery-bar" id="battery-bar"></div>
+                    </div>
+                    <div class="card-status" id="status-battery">87.0%</div>
+                    <div id="charge-remaining" style="display:none; font-size:11px; color:#22c55e; margin-top:3px;"></div>
+                    <div id="drive-remaining" style="display:none; font-size:11px; color:#f59e0b; margin-top:3px;"></div>
+                </div>
+                <button class="toggle-btn" id="btn-charging" onclick="toggle('charging')">충전 Start</button>
+            </div>
+        </div>
+
+        <!-- 작동시간 -->
+        <div class="timer-card">
+            <div class="timer-group">
+                <div class="timer-label">작동시간</div>
+                <div class="timer" id="timer">00:00:00</div>
+            </div>
+<div class="timer-group">
+                <div class="timer-label">누적 구동시간</div>
+                <div class="timer timer-sub" id="timer-cumulative">00:00:00</div>
+            </div>
+            <div class="timer-group">
+                <div class="timer-label">총 주행거리</div>
+                <div class="timer timer-sub" id="distance">0.000 km</div>
+            </div>
+        </div>
+
+        <!-- 로그 -->
+        <div class="log-wrap">
+            <div class="log-header">
+                <span>LOG</span>
+                <div class="log-controls">
+                    <button class="log-btn log-date-btn" id="btn-day-2" onclick="selectDay(2)">2일전</button>
+                    <button class="log-btn log-date-btn" id="btn-day-1" onclick="selectDay(1)">1일전</button>
+                    <button class="log-btn log-date-btn" id="btn-day-0" onclick="selectDay(0)">오늘</button>
+                    <span class="log-sep">|</span>
+                    <input class="log-input" id="filter-hour" type="number" placeholder="시(1-12)">
+                    <button class="log-btn log-ampm-btn" id="btn-am" onclick="selectAmPm('am')">AM</button>
+                    <button class="log-btn log-ampm-btn" id="btn-pm" onclick="selectAmPm('pm')">PM</button>
+                    <span class="log-sep">|</span>
+                    <input class="log-input" id="filter-minute" type="number" placeholder="분(0-59)">
+                    <span class="log-sep">|</span>
+                    <button class="log-btn log-btn-load" onclick="loadLogsTime()">불러오기</button>
+                    <button class="log-btn log-btn-clear" onclick="clearLog()">지우기</button>
+                </div>
+            </div>
+            <div class="log-box" id="log-box"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
