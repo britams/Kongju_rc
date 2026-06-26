@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 
 def main():
@@ -29,12 +30,9 @@ def main():
     print(dict_a.keys())
     print(dict_a.values())
 
-    with open("data/dict_a.json", "w", encoding='utf-8') as f:
+    with open(Path(__file__).parent.parent / "data/dict_a.json", "w", encoding='utf-8') as f:
         json.dump(dict_a, f, ensure_ascii=False, indent=4)
 
 
 if __name__ == "__main__":
     main()
-
-# dic 키값에 대해서 해시테이블 바로 자료 연결. 키값으로 인덱싱을 한다는 것은 큰 장점.
-# hash 함수 한번 실행하고 바로 저장하고. 따라서 dic 을 list 보다 더 사용한다는 것을 알고 있길. 모르면 AI.
