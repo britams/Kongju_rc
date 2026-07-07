@@ -4,6 +4,7 @@
 
 공주대에서 autocar 를 가지고 하는 프로젝트 수업
 [구글 슬라이드](https://docs.google.com/presentation/d/1NwCyi3hQ3WKvkgapCUH2Z7pcHDgDb3h2Jr1VzPnHE7E/edit?usp=sharing)
+[사전 사후 평가](https://forms.gle/Va3KQj3Zg4qWtAeE8)
 
 ---
 
@@ -124,3 +125,18 @@
 - 6교시: broadcast, 연산자, reshape, transpose, flatten
 - 7교시: 미니 프로젝트 - Autocar제어 api / webview 대시 보드 구현
 - 8교시: 미니 프로젝트 - Autocar제어 api / webview 대시 보드 구현
+
+---
+
+2026-07-02
+
+---
+
+- 1교시: 복습, numpy 기초, bool indexing, fancy indexing
+- 2교시: numpy 통계 함수, save, load
+- 3교시: Pandas 기초, Series 생성 및 인덱싱
+- 4교시: DataFrame 생성
+- 5교시: DataFrame 인덱싱, loc, iloc, drop, sort
+- 6교시: DataFrame save, load, csv, excel
+- 7교시: LiDAR 설명, LiDAR 센서 데이터 수집 및 시각화
+- 8교시: [미니 과제] 일정 거리 유지 하기
