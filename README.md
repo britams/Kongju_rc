@@ -3,8 +3,10 @@
 ---
 
 공주대에서 autocar 를 가지고 하는 프로젝트 수업
+[수업 필기 Figma](https://www.figma.com/board/gcbIjizU7fdSKyNdFJzIkR/gong_rc_2026?node-id=0-1&t=0DcRPDolUzhOXKyF-1)
 [구글 슬라이드](https://docs.google.com/presentation/d/1NwCyi3hQ3WKvkgapCUH2Z7pcHDgDb3h2Jr1VzPnHE7E/edit?usp=sharing)
 [사전 사후 평가](https://forms.gle/Va3KQj3Zg4qWtAeE8)
+[사전 사후 평가-사후](https://forms.gle/FjuQk5gpLthD9X8T7)
 
 ---
 
@@ -173,7 +175,7 @@
 
 ---
 
-2026-07-06
+2026-07-07
 
 ---
 
@@ -188,7 +190,7 @@
 
 ---
 
-2026-07-07
+2026-07-08
 
 ---
 
@@ -203,19 +205,54 @@
 
 ---
 
-2026-07-08
+2026-07-09
 
 ---
 
-- 1교시:
-- 2교시:
-- 3교시:
-- 4교시:
-- 5교시:
-- 6교시:
-- 7교시:
-- 8교시:
+- 1교시: 온다바이스 AI 소개
+- 2교시: 휠 얼라인먼트
+- 3교시: linear regression 을 활용한 휠 얼라인먼트
+- 4교시: 주행중 활용 가능한 휠 얼라인먼트 코드
+- 5교시: 차량 자세 제어
+- 6교시: linear regression 을 활용한 차량 자세 제어
+- 7교시: 사진 분류 CNN 코드 예제
+- 8교시: CNN 아키텍쳐 수정, google net, resnet, mobilenet, efficientnet
+
+---
+
+2026-07-10
+
+---
+
+- 1교시: autocar 사진 분류 CNN 전체 학습 예시
+- 2교시: 음성 분류 모델 MFCC 추출 CNN 으로 학습
+- 3교시: 모델 운용에서의 유의 사항 - HZ 설정 후 지연 시간 측정
+- 4교시: 장애물 회피 alexnet 모델 사용 - pytorch 코드 해석
+- 5교시: 장애물 회피 실습 - yolo4-tiny, mobilenet 활용
+- 6교시: 목표물 추적 코드 해석 - resnet18 활용
+- 7교시: 목표물 추적 실습
+- 8교시: 목표물 추적 실습
 
 - 점검 사항
-- softmax 코드 예제가 없음
-- cartpole 예제에서 render 가 되지 않는다. glx 관련 버전 문제인듯? 해결 안됨
+  - softmax 코드 예제가 없음
+  - cartpole 예제에서 render 가 되지 않는다. glx 관련 버전 문제인듯? 해결 안됨
+
+- 안내할 내용
+  - tmux 사용법 - sesstion, window, pane 모니터링과 디버깅
+  - daemon process, background process 운용
+    - systemd service systemctl 사용법
+    - background process 관리
+    - nohup 사용법
+  - process 확인
+    - kill, killall, pkill 사용법
+    - ps, top, htop 사용법
+  - 리소스 확인
+    - free, df, du 사용법
+    - iotop, iftop 사용법
+    - netstat, ss 사용법
+  - 프로젝트 구성
+    - 발표 방식     : PPT(google slide) + 시연영상
+    - 제출 서류     : 프로젝트 계획서
+    - 완료 후 제출  : 프로젝트 기술서, 발표자료, 소스코드, 실행파일, 실행영상
+    - 진행 사항 공유:
+      - github repository - Readme.md 에 진행 사항 공유( 오전, 오후)
